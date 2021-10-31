@@ -8,6 +8,16 @@ Opa {{name}} {{lastName}}, tudo bem?
     Beleza?
 {{/showOld}}
 
+
+<hr/>
+<h2>Usuarios do Banco</h2>
+<ul>
+    {{#users}}
+        <li>Id: {{id}}     - Nome: {{name}}      - Idade {{age}}</li>
+    {{/users}}
+</ul>
+
+
 <hr/>
 <h2>Produtos</h2>
 <ul>
