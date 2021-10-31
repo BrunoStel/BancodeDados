@@ -1,0 +1,11 @@
+Bancos de dados relacionais
+MySQL:
+- NÃO é case sensitive
+-Geralmente mais rápido para consultas simples e banco de dados menores (não que seja ruim para consultas complexas)
+
+
+
+PostgreeSQL
+-É case sensitive   
+-Para consultas complexas ou grande banco de dados, em geral é mais rápido
+
