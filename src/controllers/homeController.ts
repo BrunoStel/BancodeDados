@@ -7,6 +7,7 @@ import {User, UserInstance} from '../models/User'
 //import { sequelize } from '../instances/pg'; //Caso eu fosse usar o PG era so mudar o arquivo de importação! 
 
 import { Product } from '../models/Product';
+import { resourceLimits } from 'worker_threads';
 
 
 export const home = async (req: Request, res: Response)=>{
@@ -106,15 +107,23 @@ export const home = async (req: Request, res: Response)=>{
 //         }
 // })
 
-    let results = await User.findAll({where:{id:7}}) //Selecionando um/ou mais usuarios
-    if (results.length>0){
-        let usuario:UserInstance = results[0] //instanciando em uma variavel, o primeiro registro encontrado
-        usuario.age = 70 //Alterando propriedades da variavel instanciada (espelhando um registro do BD)
-        usuario.name = 'Alterando_dados_metodo2'
-        await usuario.save() //Agora estou alterando no banco de dados propriamente dito
-    }
+    // let results = await User.findAll({where:{id:7}}) //Selecionando um/ou mais usuarios
+    // if (results.length>0){
+    //     let usuario:UserInstance = results[0] //instanciando em uma variavel, o primeiro registro encontrado
+    //     usuario.age = 70 //Alterando propriedades da variavel instanciada (espelhando um registro do BD)
+    //     usuario.name = 'Alterando_dados_metodo2'
+    //     await usuario.save() //Agora estou alterando no banco de dados propriamente dito
+    // }
 
+//**********************************************Deletando dados
+    // await User.destroy({where:{id:1}})
 
+    // let results = await User.findAll({where:{id:2}})
+    // if(results.length > 0){
+    //     let usuario = results[0]
+
+    //     await usuario.destroy()
+    // }
 
 
     
